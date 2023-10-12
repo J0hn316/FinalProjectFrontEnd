@@ -1,7 +1,7 @@
 ## Pokemon Card Generator App / Final Project
 
 Pokemon Card Generator App us a frontend application with React and my backend API
-Link to App can be found here https://j0hn316.github.io/
+Link to App can be found here https://j0hn316.github.io/FinalProjectFrontEnd/
 Link to backend can be found here https://github.com/J0hn316/FinalProjectBackEnd
 
 ## User Stories
