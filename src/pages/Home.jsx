@@ -1,8 +1,8 @@
-import HomeBackground from "../components/homepage/HomeBackground";
-import "../components/homepage/homepage.css";
-import { useEffect, useState } from "react";
-import { getCards } from "../../services/Api";
-import { useNavigate } from "react-router-dom";
+import HomeBackground from '../components/homepage/HomeBackground';
+import '../components/homepage/homepage.css';
+import { useEffect, useState } from 'react';
+import { getCards } from '../../services/Api';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
   const [cards, setCards] = useState([]);
@@ -19,10 +19,10 @@ function Home() {
       <ul className="container">
         {cards.map((card) => {
           return (
-            <div>
+            <div key={card.card}>
               <div className="pokeimg">
                 <h3>{`${card?.name}`}</h3>
-                <img src={card.img + ".jpg"} />
+                <img src={card.img + '.jpg'} />
                 <button
                   onClick={() => {
                     nav(`/cards/edit/${card._id}`);
