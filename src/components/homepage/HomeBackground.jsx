@@ -1,5 +1,5 @@
-import "../homepage/homepage.css";
-import Img from "../../../img/PokemonCards.png";
+import '../homepage/homepage.css';
+import Img from '../../../images/PokemonCards.png';
 
 export default function HomeBackground() {
   return (

@@ -1,7 +1,7 @@
-import { getCard, editCard, deleteCard } from "../../services/Api";
-import EditCardBG from "../components/editcardpage/EditCardBG";
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { getCard, editCard, deleteCard } from '../../services/Api';
+import EditCardBG from '../components/editcardpage/EditCardBG';
+import { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 function EditPokemonCard() {
   const [card, setCard] = useState({});
@@ -10,7 +10,7 @@ function EditPokemonCard() {
 
   useEffect(() => {
     getCard(id).then((res) => setCard(res.data, res.data.img));
-  }, []);
+  }, [id]);
 
   function editTheCard(e) {
     e.preventDefault();
@@ -20,7 +20,7 @@ function EditPokemonCard() {
 
   function deleteTheCard(e) {
     e.preventDefault();
-    deleteCard(id).then(() => nav("/"));
+    deleteCard(id).then(() => nav('/'));
   }
 
   return (
@@ -29,12 +29,12 @@ function EditPokemonCard() {
       <h1>Edit Card Page</h1>
       <div className="EditPage">
         <form onSubmit={editTheCard}>
-          Name:{" "}
+          Name:{' '}
           <input type="text" name="name" placeholder="Enter new pokemon name" />
           <input type="submit" value="Change Pokemon" />
           <button onClick={deleteTheCard}>Delete Card</button>
           <div className="EditCard">
-            <img className="pokemon" src={card.img + ".jpg"} />
+            <img className="pokemon" src={card.img + '.jpg'} />
           </div>
         </form>
       </div>

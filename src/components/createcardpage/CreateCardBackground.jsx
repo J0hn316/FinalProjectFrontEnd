@@ -1,5 +1,5 @@
-import "../createcardpage/createcard.css";
-import Img from "../../../img/PokemonCards1.png";
+import '../createcardpage/createcard.css';
+import Img from '../../../images/PokemonCards1.png';
 
 export default function CreateCardBg() {
   return (
